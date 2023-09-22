@@ -1,0 +1,58 @@
+.stars-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  border: 5px solid #333;
+  background-color: #333;
+}
+
+.stars {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: rotate-stars 4s linear infinite;
+}
+
+.star-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.star {
+  font-size: 2em;
+  margin: 0.5em;
+  animation: rotate-star 1s linear infinite, blink-star 90s linear infinite;
+}
+
+ @keyframes rotate-star {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(144deg);
+  }
+}
+
+@keyframes rotate-stars {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(144000deg);
+  }
+}
+
+@keyframes blink-star {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
